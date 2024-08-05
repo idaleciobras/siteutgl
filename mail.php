@@ -4,7 +4,7 @@ $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $mensagem = $_POST['mensagem'];
 
-$destinatario = "idaleciobraz399@gmail.com";
+$destinatario = "idaleciobraz399@icloud.com";
 $assunto = "Clientes UTGL";
 
 $corpo = "Nome: ".$nome."\n".Email: ".$email."\n"."Telefone: ".$telefone."\n"."mensagem: ",$mensagem;
