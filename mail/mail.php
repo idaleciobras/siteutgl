@@ -1,22 +1,22 @@
-<?
-$name = $_POST{'name'};
-$email = $_POST{'email'};
-$phone = $_POST{'phone'};
-$subject = $_POST{'subject'};
-$message = $_POST['message'];
+<?php
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$telefone = $_POST['telefone'];
+$mensagem = $_POST['mensagem'];
 
-$email_message = "
+$destinatario = "idaleciobraz399@gmail.com";
+$assunto = "Clientes UTGL";
 
-Name: ".$name."
-Email: ".$email."
-Phone: ".$phone."
-Subject: ".$subject."
-Message: ".$message."
+$corpo = "Nome: ".$nome."\n".Email: ".$email."\n"."Telefone: ".$telefone."\n"."mensagem: ",$mensagem;
 
-";
+$cabeca = "from: idaleciobraz399@gmail.com" ."\n"."Reply-to: ".$email."\n"."X-Mailer:PHP/" .phpversion();
 
-mail ("name@youremail.com" , "New Message", $email_message);
-header("location: ../mail-success.html");
+if(mail($destino,$assunto,$corpo,$cabeca)){
+  echo("Email enviado com sucesso");
+}else{
+  echo("Houve um erro a enviar o email");
+
+
 ?>
 
 
